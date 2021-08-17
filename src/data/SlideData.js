@@ -2,7 +2,7 @@ import HRPayroll from "../assets/hr_payroll.svg";
 import LOA from "../assets/LOA.svg";
 import checkpoint from "../assets/checkpoint.svg";
 import objectives from "../assets/objectives.svg";
-import HRPA from "../assets/HRPA.svg";
+// import HRPA from "../assets/HRPA.svg";
 import HumanResource from "../assets/human_resource.svg";
 import DefenseCivilian from "../assets/defense_civilian.svg";
 import ArmyCivilian1 from "../assets/ArmyCivilian1.svg";
@@ -97,7 +97,7 @@ const SlideData = [
         ],
       },
     ],
-    image: HRPA,
+    image: objectives,
     width: imageSize,
   },
   {
