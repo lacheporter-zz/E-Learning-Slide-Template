@@ -1,0 +1,150 @@
+/* .react-quiz-container .number-of-selection {
+  background: var(--primary-color);
+  margin-left: 5px;
+}
+.react-quiz-container .selection-tag.single {
+  background: var(--primary-color);
+} */
+
+.react-slideshow-container {
+  padding: 0rem 0rem 0rem 3rem;
+  width: 100%;
+  height: inherit;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list {
+  padding: 1rem;
+}
+.text {
+  margin: 1rem 0;
+}
+.p-1 {
+  padding: 1rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.react-slideshow-container .nav {
+  z-index: 10;
+}
+.react-slideshow-fade-wrapper {
+  border: solid 1px red;
+  overflow: hidden;
+}
+.react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap > div {
+  position: relative;
+  opacity: 0;
+}
+.slide {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.react-slideshow-wrapper .images-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.react-slideshow-zoom-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.react-slideshow-zoom-wrapper .zoom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.react-slideshow-zoom-wrapper .zoom-wrapper > div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 0px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+
+  background-color: var(--secondary-color);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: rgb(189, 189, 189);
+}
+
+/* ARROWS */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next-arrow {
+  position: absolute;
+  background: var(--secondary-color);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50px;
+  right: 2%;
+  bottom: 5%;
+  cursor: pointer;
+}
+.next-arrow.nav:hover,
+.prev-arrow.nav:hover {
+  opacity: (0.8);
+}
+.fas.fa-arrow-right {
+  line-height: 60px;
+  color: white;
+  font-size: 1.5rem;
+}
+.prev-arrow {
+  position: absolute;
+  background: var(--secondary-color);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50px;
+  right: 10%;
+  bottom: 5%;
+  cursor: pointer;
+}
+.fas.fa-arrow-left {
+  line-height: 60px;
+  color: white;
+  font-size: 1.5rem;
+}
