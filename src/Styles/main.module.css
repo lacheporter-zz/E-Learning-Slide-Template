@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap");
 :root {
   --primary-color: #07243a;
-  --secondary-color: #e0ae0c;
+  --secondary-color: rgb(255, 255, 255);
   --white: white;
   --box: "solid 1px red";
-  --font: "poppins";
+  --font: "Poppins";
 }
 * {
   box-sizing: border-box;
