@@ -3,11 +3,12 @@ import { AppContext } from "../context/AppContext";
 import Slideshow from "../components/SlideShow/SlideShow";
 import Header from "../components/Header/Header";
 import OptionPanel from "../components/OptionPanel/OptionPanel";
-import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Modal from "../components/Modal/Modal";
 import SlideCounter from "../components/SlideShow/SlideCounter";
 import styles from "../Styles/main.module.css";
 import SlideData from "../data/SlideData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function AppContainer() {
   //STATE MANAGEMENT//
@@ -71,22 +72,22 @@ export default function AppContainer() {
     easing: "ease-out",
     prevArrow: (
       <div
-        className="prev-arrow"
+        className={styles.prevArrow}
         style={{
           display: `${showPrevArrow}`,
         }}
       >
-        <i className="fas fa-arrow-left"></i>
+        <FontAwesomeIcon icon={faArrowLeft} className={styles.arrowStyle} />
       </div>
     ),
     nextArrow: (
       <div
-        className="next-arrow"
+        className={styles.nextArrow}
         style={{
           display: `${showNextArrow}`,
         }}
       >
-        <i className="fas fa-arrow-right"></i>
+        <FontAwesomeIcon icon={faArrowRight} className={styles.arrowStyle} />
       </div>
     ),
     onChange: (previous, next) => {

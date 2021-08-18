@@ -1,8 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
-import openResource from "../../assets/open_resource.svg";
-import closedResource from "../../assets/closed_resource.svg";
+import { faBookOpen, faBook, faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import jobAid from "../../assets/Overview of GFEBS HR and Payroll and Labor Process Job Aid.pdf";
 import styles from "../../Styles/main.module.css";
 
@@ -21,34 +19,30 @@ export default function Resources() {
     <Fragment>
       <div className={styles.resourcesContainer}>
         <div className={styles.resourcesSelect} onClick={showResourcesHandler}>
-          {iconState ? (
-            <img className={styles.resourcesIconClosed} src={closedResource} />
-          ) : (
-            <img className={styles.resourcesIconOpen} src={openResource} />
-          )}
-          <div className={styles.resourcesTitle}>Resources</div>
+          {iconState ? <FontAwesomeIcon icon={faBook} /> : <FontAwesomeIcon icon={faBookOpen} />}
+          <div className={styles.resourcesTitle}>Menu</div>
           {iconState ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretUp} />}
         </div>
         <div className={`${styles.resourcesList} ${!showResourceList ? styles.resourcesClosed : styles.resourcesOpen}`}>
           <ul className={styles.resourcesListGroup}>
             <li className={styles.resourcesListItem}>
               <a className={styles.resourcesListLink} href="#">
-                Job Aids
+                Resource 1 Link
               </a>
             </li>
             <li className={styles.resourcesListItem}>
               <a className={styles.resourcesListLink} href="#">
-                User Procedures
+                Resource 2 Link
               </a>
             </li>
             <li className={styles.resourcesListItem}>
               <a className={styles.resourcesListLink} href="#">
-                L436C Content in PDF Format
+                Resource 3 Link
               </a>
             </li>
             <li className={styles.resourcesListItem}>
-              <a className={styles.resourcesListLink} href={jobAid} target="_blank" rel="noopener noreferrer">
-                Overview of GFEBS HR Payroll &amp; Labor Process Job Aid
+              <a className={styles.resourcesListLink} href="#">
+                Resource 4 Link
               </a>
             </li>
           </ul>

@@ -1,11 +1,11 @@
 /* GLOBAL */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap");
 :root {
-  --primary-color: #07243a;
-  --secondary-color: rgb(255, 255, 255);
-  --white: white;
-  --box: "solid 1px red";
+  --primary-color: #1a1e2b;
+  --secondary-color: rgb(35, 202, 231);
+  --tertiary-color: white;
   --font: "Poppins";
+  --gradient: "linear-gradient(to right, rgba(67, 233, 123, 0.5), rgba(56, 249, 215, 0.5))";
 }
 * {
   box-sizing: border-box;
@@ -223,7 +223,7 @@ ul {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   font-size: 1.3em;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -240,6 +240,7 @@ ul {
   background-color: var(--primary-color);
   overflow: hidden;
   transition-duration: 0.3s;
+  border-radius: 0px 4px;
 }
 .resourcesClosed {
   height: 0px;
@@ -265,12 +266,12 @@ ul {
   list-style: none;
 }
 .resourcesListItem {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   margin-top: 20px;
   font-size: 1.2rem;
 }
 .resourcesListLink {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   text-decoration: none;
 }
 
@@ -284,6 +285,13 @@ ul {
   background-color: whitesmoke;
   height: 100%;
   overflow: scroll;
+  transition-duration: 0.3s;
+}
+.sideNavOpen {
+  width: 50%;
+}
+.sideNavClosed {
+  width: 0%;
 }
 .sideNavHeader {
   display: flex;
@@ -312,8 +320,8 @@ ul {
   border-width: 1px 0px 1px 0px;
 }
 .sideNavListItem:hover {
-  background: var(--secondary-color);
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--tertiary-color);
   transition-duration: 150ms;
   z-index: 10;
   border-top: none;
@@ -407,11 +415,10 @@ ul {
   padding-left: 0;
 }
 .searchLink {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer;
-  font-weight: bold;
   color: var(--secondary-color);
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 /* TERMS */
@@ -462,6 +469,7 @@ ul {
   transition-duration: 0.2s;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
 }
 .panelOpen {
   width: 150px;
@@ -474,7 +482,7 @@ ul {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   width: 100%;
   font-size: 1.2rem;
   text-align: left;
@@ -489,11 +497,11 @@ ul {
   padding: 0;
   margin: 0;
   margin-left: 5px;
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
 }
 .optionsItem:hover,
 .optionsLink:hover {
-  color: white;
+  opacity: 0.5;
 }
 /* PROGRESS */
 .progressRow {
@@ -503,11 +511,8 @@ ul {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: var(--primary-color);
 }
-.bgSuccess {
-  background-color: var(--secondary-color);
-}
+
 .progressBarStripes {
   background-image: linear-gradient 45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%,
     rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent;
@@ -523,7 +528,7 @@ ul {
   width: 200px;
   z-index: 10;
 }
-.progressBar {
+.progressFill {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -549,6 +554,48 @@ ul {
     animation: none;
   }
 }
+
+/* ARROWS */
+
+.nextArrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+
+  right: 2.5%;
+  bottom: 5%;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.prevArrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+  right: 10%;
+  bottom: 5%;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.nextArrow:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+.prevArrow:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+.arrowStyle {
+  color: white;
+  font-size: 1.75rem;
+}
+
 /* TABLET */
 @media only screen and (max-width: 900px) {
   .headingTitle {

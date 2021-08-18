@@ -5,7 +5,6 @@ import TextSlide from "./TextSlide";
 import CourseContent from "../CourseContent/CourseContent";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "../../Styles/main.module.css";
-import ProgressBar from "../ProgressBar/ProgressBar";
 
 function Slideshow(props) {
   return (

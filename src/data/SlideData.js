@@ -1,6 +1,6 @@
 import placholderImage from "../assets/placeholder_image.svg";
 import checkpoint from "../assets/checkpoint.svg";
-import objectives from "../assets/objectives.svg";
+// import objectives from "../assets/objectives.svg";
 
 // function formatted() {
 //   return <span style={{ fontWeight: "bold" }}>Training</span>;

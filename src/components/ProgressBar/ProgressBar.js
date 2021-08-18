@@ -12,7 +12,7 @@ export default function ProgressBar() {
       <div className={styles.progressRow}>
         <div className={styles.progress}>
           <div
-            className={`${styles.progressBar} ${styles.progressBarStriped} ${styles.bgSuccess}`}
+            className={`${styles.progressFill} ${styles.progressBarStriped} `}
             role="progressbar"
             style={{ width: `${context.progress}%` }}
             aria-valuenow={parseInt(`${context.progress}`, 10)}
@@ -21,7 +21,7 @@ export default function ProgressBar() {
           ></div>
         </div>
       </div>
-      {/* 
+      {/* //for circular progress//
       <div style={{ width: "75px" }}>
         <CircularProgressbar
           value={parseInt(`${context.progress}`, 10)}
