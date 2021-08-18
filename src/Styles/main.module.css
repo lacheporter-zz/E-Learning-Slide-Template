@@ -557,7 +557,7 @@ ul {
 
 /* ARROWS */
 
-.nextArrow {
+.nextArrowStyle {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -565,14 +565,13 @@ ul {
   background: var(--primary-color);
   padding: 1rem;
   text-align: center;
-
   right: 2.5%;
   bottom: 5%;
   cursor: pointer;
   border-radius: 0.25rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
-.prevArrow {
+.prevArrowStyle {
   position: absolute;
   background: var(--primary-color);
   padding: 1rem;

@@ -1,20 +1,12 @@
-import React, { useState, useContext, Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import QuizData from "../../data/QuizData";
 import Quiz from "react-quiz-component";
-import { AppContext } from "../../context/AppContext";
 import QA from "../../assets/Q&ASmall.svg";
 import styles from "../../Styles/main.module.css";
 
 export default function QuizSlide(props) {
   //state management
   const [key, setKey] = useState();
-  const context = useContext(AppContext);
-
-  // Sets post-quiz state
-  const onCompleteAction = () => {
-    document.querySelector(".next-arrow").style.display = "block";
-    context.onQuizCompletion();
-  };
   // Renders custom results page
   const renderCustomResultPage = () => {
     return (
@@ -26,6 +18,9 @@ export default function QuizSlide(props) {
       </>
     );
   };
+  function onCompleteAction() {
+    props.quizComplete();
+  }
   // Resets Quiz key to random number and rerenders it... (revisit)
   function retakeQuiz() {
     return setKey(Math.random());

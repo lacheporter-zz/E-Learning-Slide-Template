@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React, { useContext, Fragment } from "react";
+import { AppContext } from "../../context/AppContext";
 import { Slide } from "react-slideshow-image";
 import QuizSlide from "./QuizSlide";
 import TextSlide from "./TextSlide";
@@ -7,6 +8,13 @@ import SearchBar from "../SearchBar/SearchBar";
 import styles from "../../Styles/main.module.css";
 
 function Slideshow(props) {
+  const context = useContext(AppContext);
+
+  // Sets post-quiz state
+  const quizComplete = () => {
+    context.onQuizCompletion();
+  };
+
   return (
     <Fragment>
       {props.showSearch ? <SearchBar searchWidth={props.searchWidth} toggleSearch={props.toggleSearch} /> : null}
@@ -14,7 +22,7 @@ function Slideshow(props) {
         {props.SlideData.map((slide, index) => (
           <TextSlide key={index} {...slide} />
         ))}
-        <QuizSlide title="Checkpoint Questions" />
+        <QuizSlide title="Checkpoint Questions" quizComplete={quizComplete} />
       </Slide>
       <CourseContent showCourseList={props.showCourseList} onclick={props.toggleCourseList} />
     </Fragment>
