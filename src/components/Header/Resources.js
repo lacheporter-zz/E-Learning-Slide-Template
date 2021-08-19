@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faBook, faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
-import jobAid from "../../assets/Overview of GFEBS HR and Payroll and Labor Process Job Aid.pdf";
+// import jobAid from "../../assets/Overview of GFEBS HR and Payroll and Labor Process Job Aid.pdf";
 import styles from "../../Styles/main.module.css";
 
 export default function Resources() {
@@ -26,22 +26,22 @@ export default function Resources() {
         <div className={`${styles.resourcesList} ${!showResourceList ? styles.resourcesClosed : styles.resourcesOpen}`}>
           <ul className={styles.resourcesListGroup}>
             <li className={styles.resourcesListItem}>
-              <a className={styles.resourcesListLink} href="#">
+              <a className={styles.resourcesListLink} href="index.js">
                 Resource 1 Link
               </a>
             </li>
             <li className={styles.resourcesListItem}>
-              <a className={styles.resourcesListLink} href="#">
+              <a className={styles.resourcesListLink} href="index.js">
                 Resource 2 Link
               </a>
             </li>
             <li className={styles.resourcesListItem}>
-              <a className={styles.resourcesListLink} href="#">
+              <a className={styles.resourcesListLink} href="index.js">
                 Resource 3 Link
               </a>
             </li>
             <li className={styles.resourcesListItem}>
-              <a className={styles.resourcesListLink} href="#">
+              <a className={styles.resourcesListLink} href="index.js">
                 Resource 4 Link
               </a>
             </li>

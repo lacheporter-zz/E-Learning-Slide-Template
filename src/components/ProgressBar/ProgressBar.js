@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from "react";
 import { AppContext } from "../../context/AppContext";
 import styles from "../../Styles/main.module.css";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+// import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function ProgressBar() {

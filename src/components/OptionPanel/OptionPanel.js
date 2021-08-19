@@ -6,7 +6,7 @@ export default function OptionPanel(props) {
   const [iconState, setIconState] = useState(true);
   const [panelWidth, setPanelWidth] = useState(false);
   const [showName, setShowName] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   const toggleListHandler = () => {
     props.toggleCourseList();

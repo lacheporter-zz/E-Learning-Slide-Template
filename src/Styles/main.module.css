@@ -406,7 +406,7 @@ ul {
 .searchResults ul {
   list-style: none;
   border-radius: 2px;
-  padding: 0.5rem;
+  padding: 0.25rem 0rem;
 }
 .searchResults li {
   font-size: 1rem;
@@ -415,10 +415,11 @@ ul {
   padding-left: 0;
 }
 .searchLink {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+
   cursor: pointer;
-  color: var(--secondary-color);
-  padding: 1rem;
+  color: blueviolet;
+  padding: 0.5rem 0rem;
 }
 
 /* TERMS */
@@ -559,9 +560,7 @@ ul {
 
 .nextArrowStyle {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   background: var(--primary-color);
   padding: 1rem;
   text-align: center;

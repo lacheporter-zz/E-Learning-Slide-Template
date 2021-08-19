@@ -23,7 +23,7 @@ export default function Modal() {
       <span onClick={closeModal} className={styles.myClose}>
         &times;
       </span>
-      <img id="img1" className={styles.myModalContent} />
+      <img id="img1" className={styles.myModalContent} alt="zoomed" />
       <div id="myCaption">Enlarged Image</div>
     </div>
   );
